@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-from .ols import OLS
-from ..utils.log import logger
+from ols import OLS
+# from ..utils.log import logger
 
 def load_data():
     train = pd.read_csv("data/reg_train.csv")
@@ -20,7 +20,7 @@ def test_ols(X_train, y_train, X_test, y_test):
     ols = OLS(X_train, y_train)
     ols.fit()
     y_hat = ols.predict(X_test)
-    print("Error:", mse(y_test, y_hat))
+    print("Mean Squared Error:", mse(y_test, y_hat))
 
 
 if __name__ == "__main__":

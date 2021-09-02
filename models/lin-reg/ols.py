@@ -7,8 +7,9 @@ class OLS:
 
     def fit(self):
         """Fits the standard OLS model."""
-        self.beta = np.linalg.inv(self.X @ np.transpose(self.X)) @ np.transpose(self.X) @ self.y
+        self.beta = np.linalg.inv(np.transpose(self.X) @ self.X) @ np.transpose(self.X) @ self.y
 
-    def predict(self):
+    def predict(self, X_test):
         """Predicts based on the linear coeff. beta"""
-        return self.X @ self.beta 
+        print(self.beta @ X_test.values)
+        return X_test @ self.beta
