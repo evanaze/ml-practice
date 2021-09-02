@@ -1,5 +1,4 @@
 import numpy as np
-from numpy.core.fromnumeric import sort
 import pandas as pd
 from sklearn.metrics.pairwise import manhattan_distances, euclidean_distances
 

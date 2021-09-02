@@ -3,6 +3,7 @@ import pandas as pd
 from .solution import predict
 from ..utils.log import logger
 
+
 def load_data():
     return pd.read_csv("./data/reg_train.csv"), pd.read_csv("./data/reg_test.csv")
 
