@@ -1,6 +1,7 @@
 import math
 import pandas as pd
 from solution import predict
+from utils.log import logger
 
 
 def load_data():
@@ -13,4 +14,4 @@ def test_solution(train, test):
 if __name__ == "__main__":
     train, test = load_data()
     test_solution(train, test)
-    print("All tests passed.")
+    logger.info("All tests passed.")
