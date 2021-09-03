@@ -11,5 +11,4 @@ class OLS:
 
     def predict(self, X_test):
         """Predicts based on the linear coeff. beta"""
-        print(self.beta @ X_test.values)
-        return X_test @ self.beta
+        return X_test.values @ self.beta
